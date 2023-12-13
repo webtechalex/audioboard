@@ -1,17 +1,6 @@
-DROP TABLE IF EXISTS file_metadata;
-
-CREATE TABLE file_metadata (
-    id UUID PRIMARY KEY,
-    fileName UUID,
-    visibleTrackName VARCHAR(255),
-    extension VARCHAR(10),
-    length INT,
-    owner UUID
-);
-
 SET @owner_uuid = '3e3b8925-ba7e-4f97-8c75-61be64e0ee4a';
 
-INSERT INTO file_metadata (id, fileName, visibleTrackName, extension, length, owner)
+INSERT INTO file_metadata (id, file_name, visible_track_name, extension, length, owner)
 VALUES
     ( 'b2f4062a-1392-4d3d-8c4e-9f3351e1ae1f', 'e387ece3-5c47-43d8-a606-1a7f83f24524', 'FabulousSpring', 'wav', '7787', @owner_uuid ),
     ( 'ad531563-3be5-4e36-a5e9-bcf7157a80d6', '4e455588-ab5c-4d6e-9ade-ee3c9a404c5e', 'TackyFurniture', 'wav', '13386', @owner_uuid ),
@@ -33,12 +22,12 @@ VALUES
     ( 'f43c17a8-f3e2-4e01-88e6-a8421fafbad6', '9e7eb1e2-29ff-4f3d-87f7-443457ae94ff', 'FlashyMeasure', 'wav', '36860', @owner_uuid ),
     ( 'd3f5d584-35c2-4ea1-82ba-1a268844f956', 'e5200b24-d759-4462-ab08-0ea7c3c75703', 'TinyAir', 'wav', '11310', @owner_uuid ),
     ( 'c64cf828-190c-4ffb-b3cb-057d71081a6e', '86a1662d-da33-4cdc-bee0-8fbdf1711b9f', 'AbruptScale', 'wav', '58285', @owner_uuid ),
-    ( '5ed6da81-1d72-4161-9873-64d4334b84c1', '2835b92c-58ab-4d32-b6a8-d34669df021a', 'Earsplitting Death', 'wav', '59445', @owner_uuid ),
+    ( '5ed6da81-1d72-4161-9873-64d4334b84c1', '2835b92c-58ab-4d32-b6a8-d34669df021a', 'EarsplittingDeath', 'wav', '59445', @owner_uuid ),
     ( 'afff0fba-08b1-4f11-bad2-4551709acae5', '1d3dde11-4848-4106-a687-6105fbbdf5ac', 'RealChickens', 'wav', '4432', @owner_uuid ),
     ( 'dd2a519b-4ba1-4cf6-b79d-b4b8e257e81c', '65438ed2-52a4-45c8-8ab6-0928b44a1439', 'PoliteAmount', 'wav', '24732', @owner_uuid ),
     ( '5f9bb89d-9e36-45b0-b963-4ecc76a7f8f9', '786a2533-de94-4de0-beb0-7a8381695091', 'EfficientBalloon', 'wav', '57921', @owner_uuid ),
     ( 'f1cd2ce5-c618-4552-a8db-42996163d9fa', '52a489d1-dccf-4852-8dad-0686f531adfb', 'JadedMountain', 'wav', '17937', @owner_uuid ),
-    ( 'a63c5dab-3521-49cf-9f25-dd0478ae3ae5', 'ecbccb9e-8812-49b4-b68a-c6bebb5ff7ad', 'Combative Horn', 'wav', '47338', @owner_uuid ),
+    ( 'a63c5dab-3521-49cf-9f25-dd0478ae3ae5', 'ecbccb9e-8812-49b4-b68a-c6bebb5ff7ad', 'CombativeHorn', 'wav', '47338', @owner_uuid ),
     ( '4de51a81-d272-4404-a596-8419c5a20000', 'f11d8a21-84ae-4cf8-a703-f15f74a515bf', 'FancyFiction', 'wav', '10969', @owner_uuid ),
     ( 'a64c4a59-ecb2-4390-a6fa-4fb19787843a', '87920baa-6252-4974-ac0a-57dd143a7e86', 'ToughArt', 'wav', '15098', @owner_uuid ),
     ( 'ce75cf4a-c929-4a08-805f-e7ae807068d7', '57519e0e-26fe-41e7-9c8c-14a4a5b3aaa8', 'PurpleCause', 'wav', '41611', @owner_uuid ),
