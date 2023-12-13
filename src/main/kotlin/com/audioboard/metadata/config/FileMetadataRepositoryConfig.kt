@@ -1,13 +1,14 @@
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories
 import org.springframework.jdbc.datasource.DriverManagerDataSource
 import javax.sql.DataSource
 
 @Configuration
 @EnableJdbcRepositories(basePackages = ["com.audioboard.metadata.repository"])
-class JdbcConfig {
+class JdbcConfig : AbstractJdbcConfiguration() {
     @Value("\${spring.datasource.url}")
     private val dbUrl: String? = null
 
